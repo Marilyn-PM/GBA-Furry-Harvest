@@ -15,80 +15,13 @@
       border-bottom: 2px solid #ccc;
       padding-bottom: 0.3rem;
     }
-    img.header-icon {
-      width: 120px;
-      display: block;
-      margin-bottom: 1rem;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .gallery img {
-      width: 30%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
     ul {
       padding-left: 1.2rem;
-    }
-    
-    /* Carousel for Images */
-    .carousel-container {
-      position: relative;
-      max-width: 300px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 12px;
-      border: 1px solid #ccc;
-    }
-
-    .carousel-slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-      width: 100%;
-    }
-
-    .carousel-slide {
-      min-width: 100%;
-      transition: opacity 0.5s ease-in-out;
-    }
-
-    .carousel-slide img {
-      width: 100%;
-      display: block;
-    }
-
-    .carousel-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-      padding: 0 1rem;
-      box-sizing: border-box;
-    }
-
-    .carousel-buttons button {
-      background-color: rgba(0, 0, 0, 0.5);
-      color: #fff;
-      border: none;
-      padding: 0.30rem 0.5rem;
-      font-size: 1.0rem;       
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    iframe {
-    display: block;
-    margin: 0 auto;
     }
   </style>
 </head>
 <body>
-  <img src="pagesImages/Title.jpeg" alt="App Icon" class="header-icon" style="width: 300px; height: auto;" />
+  <img src="pagesImages/Title.jpeg" alt="App Icon" class="header-icon" style="width: 400px; height: auto;" />
 
   <h1>Introduction</h1>
   <p>This project is a C program that runs on a Game Boy Advance (GBA) emulator. The program demonstrates an understanding of low-level hardware programming in C with GBA devices that are accessed using memory-mapped I/O. Since GBA is a slow computer, optimization tricks (such as DMA) were used to prevent common issues (such as tearing).</p>
@@ -114,34 +47,9 @@
   <p></p>
 
   <h1>Contributors</h1>
-  <p>We acknowledge the efforts of all team members who contributed to the app's development:</p>
+  <p>This program was created by:</p>
   <ul>
     <li>Marilyn Pelayo-Montufar (Marilyn-PM)</li>
   </ul>
-
-  <script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      const track = document.getElementById('carouselSlides');
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      showSlide(currentIndex);
-    }
-
-    // Optional: Auto-slide every 5 seconds
-    setInterval(nextSlide, 5000);
-  </script>
-
 </body>
 </html>
